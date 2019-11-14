@@ -15,12 +15,7 @@
 <div class="loginWraper">
     <div id="loginform" class="loginBox">
         {{-- 显示表单验证错误信息 --}}
-        @if($errors->any())
-            @foreach($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        @endif
-
+        @include('admin.public.msg')
         <form class="form form-horizontal" action="{{ route('admin.login') }}" method="post">
             {{-- laravel5.5--}}
             @csrf

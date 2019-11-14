@@ -23,7 +23,13 @@ class LoginController extends Controller
         ]);
 //        auth登录
         $bool=auth()->attempt($data);
-        dump($bool);
-        dump(auth()->user());
+//        dump($bool);
+//        dump(auth()->user());
+//        判断用户是否登陆成功
+        if (!$bool){
+//            没有登陆成功返回登录页，
+            return redirect(route("admin.login"))->withErrors(['error'=> "登录失败"] );
+        }
+        return redirect(route('admin.index'))->with('success','登录成功');
     }
 }
