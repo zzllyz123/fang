@@ -11,4 +11,19 @@ class LoginController extends Controller
     public function index(){
         return view('admin.login.index');
     }
+//    登录处理
+//
+    public function login(Request $request){
+
+        //接收数据
+//        表单验证
+        $data=$this ->validate($request,[
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+//        auth登录
+        $bool=auth()->attempt($data);
+        dump($bool);
+        dump(auth()->user());
+    }
 }
