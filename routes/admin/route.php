@@ -10,14 +10,22 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], fu
 
     // 中间件中以 中间件名称：传过去的参数
     Route::group(['middleware' => ['checkadmin']], function () {
-
-        //----------------------------
         // 后台首页
         Route::get('index', 'IndexController@index')->name('index');
         // 后台欢迎页
-        //Route::get('welcome','IndexController@welcome')->name('welcome')->middleware('checkadmin');
         Route::get('welcome', 'IndexController@welcome')->name('welcome');
         // 退出登录
         Route::get('logout', 'IndexController@logout')->name('logout');
+        // 用户列表页
+        Route::get('user/index','AdminController@index')->name('user.index');
+        // 添加用户显示
+        Route::get('user/create','AdminController@create')->name('user.create');
+        // 添加用户处理
+        Route::post('user/create','AdminController@store')->name('user.store');
+        // 修改用户显示
+        Route::get('user/edit/{id}','AdminController@edit')->name('user.edit');
+        // 修改用户处理
+        Route::put('user/edit/{id}','AdminController@update')->name('user.update');
+
     });
 });
