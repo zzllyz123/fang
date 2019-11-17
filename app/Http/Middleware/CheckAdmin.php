@@ -13,7 +13,7 @@ class CheckAdmin {
      * @param $params 获取中间件用：传过来的参数 ，此形参只有在中间件有传参时才写
      * @return mixed
      */
-    public function handle($request, Closure $next) {
+    public function handle($request, Closure $next, $params) {
 
         /*var_dump($params);
         // 中间件

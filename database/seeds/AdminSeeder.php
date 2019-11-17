@@ -1,17 +1,19 @@
 <?php
+// 数据填充文件
 
 use Illuminate\Database\Seeder;
+// 后台用户模型
 use App\Models\Admin;
-class AdminSeeder extends Seeder
-{
+
+class AdminSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
-        //
+    public function run() {
+
+        // 清空数据 truncate
         Admin::truncate();
 
         // 调用factory数据工厂，生成数据

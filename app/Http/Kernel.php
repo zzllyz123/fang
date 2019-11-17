@@ -22,7 +22,7 @@ class Kernel extends HttpKernel {
         \App\Http\Middleware\TrustProxies::class,
 
         // 后台用户是否登录检查
-//        \App\Http\Middleware\CheckAdmin::class,
+        \App\Http\Middleware\CheckAdmin::class,
     ];
 
     /**

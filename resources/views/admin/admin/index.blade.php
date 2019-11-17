@@ -60,7 +60,7 @@
                         <td>{{ $item->email ?? '无' }}</td>
                         <td>{{ $item->created_at }}</td>
                         <td class="td-manage">
-                            {{-- <a href="{{ route('admin.user.edit',['id'=>$item->id]) }}" class="label label-secondary radius">修改</a>--}}
+                        {{-- <a href="{{ route('admin.user.edit',['id'=>$item->id]) }}" class="label label-secondary radius">修改</a>--}}
                             {{-- 简写 --}}
                             <a href="{{ route('admin.user.edit',$item) }}" class="label label-secondary radius">修改</a>
                             <a href="" class="label label-danger radius">删除</a>

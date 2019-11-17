@@ -67,6 +67,8 @@ return [
     |
     */
 
+    # 时区
+    #'timezone' => 'UTC',
     'timezone' => 'PRC',
 
     /*
@@ -79,7 +81,8 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
+    # 本地化语言所示
+    #'locale' => 'en',
     'locale' => 'zh-CN',
 
     /*
@@ -106,6 +109,8 @@ return [
     |
     */
 
+    #'faker_locale' => 'en_US',
+    # faker本地化
     'faker_locale' => 'zh_CN',
 
     /*

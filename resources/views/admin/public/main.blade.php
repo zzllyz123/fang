@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ staticAdminWeb() }}static/h-ui.admin/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/css/pagination.css" />
     <title>我的桌面</title>
-@yield('css')
+    @yield('css')
 </head>
 <body>
 @yield('cnt')

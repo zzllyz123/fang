@@ -13,6 +13,7 @@ return [
     |
     */
 
+    // 默认使用那一个guard来进行 auth登录
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
@@ -66,8 +67,9 @@ return [
 
     'providers' => [
         'users' => [
+            // 模型 ORM
             'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
+            'model' => App\Models\Admin::class
         ],
 
         // 'users' => [

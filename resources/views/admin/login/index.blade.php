@@ -14,8 +14,11 @@
 <div class="header"></div>
 <div class="loginWraper">
     <div id="loginform" class="loginBox">
-        {{-- 显示表单验证错误信息 --}}
+
+        {{-- 表单验证提示 blade模板包含，把共用的html提取到外部，方便日后共用 --}}
         @include('admin.public.msg')
+
+
         <form class="form form-horizontal" action="{{ route('admin.login') }}" method="post">
             {{-- laravel5.5--}}
             @csrf
